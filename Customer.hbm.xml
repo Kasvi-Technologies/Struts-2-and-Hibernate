@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.comvivaapp.model.Customer" 
+									table="customer">
+		<id name="customerId" column="customerId">
+			<generator class="increment"/>
+		</id>									
+		<property name="userName" column="userName"/>
+		<property name="password" column="password"/>
+		<property name="gender" column="gender"/>
+		<property name="address" column="address"/>
+		<property name="country" column="country"/>
+		<property name="hobbiesStr" column="hobbies"/>	
+		<!-- we will create hobbiesStr variable in 
+		Customer class . 
+		List hobbies variable should be converted into 
+		hobbiesStr -->
+		<property name="createdDate" column="createdDate"/>
+	</class>
+</hibernate-mapping>
